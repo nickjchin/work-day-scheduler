@@ -10,19 +10,20 @@ $(document).ready(function () {
 
     //create variable to save user input and time
     var time = moment().format("hA");
-    var userInput = document.querySelector(".user-input");
+    var userInput = document.querySelector(".user-input").value;
+    console.log(userInput);
     // save to localStorage
     localStorage.setItem("event", JSON.stringify({ time: time, event: userInput }));
     // Alert user that items have been saved to localStorage.
     var localStorageAlert = document.getElementById("alert");
-    localStorageAlert.innerText = "Event saved to local storage '\u2713'";
+    localStorageAlert.innerText = "Event saved to local storage \u2713";
     // create some kind of timeOut value that removes the notification
-    $("#alert").fadeOut("slow");
+    $("#alert").fadeIn("slow").delay(3000).fadeOut("slow");
   });
 
   // create time updater function()
   // get current time
-
+  var currentTime = moment().format("LT");
   // create our loop to go over all the time blocks (rows)  -  each row has id indicating which hour
 
   // if else if statement to:
