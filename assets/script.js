@@ -252,6 +252,7 @@ $(document).ready(function () {
 
   // Retrieve localStorage and render items to the correct rows    // could copy paste 10 times if one row works
   var localStorageArr = JSON.parse(localStorage.getItem("allEvents"));
+  console.log(localStorageArr);
   console.log(localStorageArr[0].time);
   for (var j = 0; j < localStorageArr.length; j++) {
     if (localStorageArr[j].time == 9) {
@@ -262,6 +263,16 @@ $(document).ready(function () {
       document.getElementById(11).innerText = localStorageArr[j].event;
     } else if (localStorageArr[j].time == 12) {
       document.getElementById(12).innerText = localStorageArr[j].event;
+    } else if (localStorageArr[j].time == 1) {
+      document.getElementById(13).innerText = localStorageArr[j].event;
+    } else if (localStorageArr[j].time == 2) {
+      document.getElementById(14).innerText = localStorageArr[j].event;
+    } else if (localStorageArr[j].time == 3) {
+      document.getElementById(15).innerText = localStorageArr[j].event;
+    } else if (localStorageArr[j].time == 4) {
+      document.getElementById(16).innerText = localStorageArr[j].event;
+    } else if (localStorageArr[j].time == 5) {
+      document.getElementById(17).innerText = localStorageArr[j].event;
     }
   }
 });
